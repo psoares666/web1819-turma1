@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	
+	<style>
+	.pagina{
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+
+		grid-template-areas: 
+		" d1 d1 d1 d2 d2 d2 d2 d2 d2 d2 d2 d2"
+		" d1 d1 d1 d3 d3 d3 d3 d3 d3 d3 d3 d3"
+		" . d4 d4 d4 d4 d4 d4 d4 d4 d4 d4 d4"
+	}
+
+	.div1{grid-area: d1}
+	.div2{grid-area: d2}
+	.div3{grid-area: d3}
+	.div4{grid-area: d4}
+
+	.div1{background-color: green;}
+	.div2{background-color: blue;}
+	.div3{background-color: yellow;}
+	.div4{background-color: pink;}
+
+
+
+	@media only screen and (max-width: 768px) {
+		
+		.div1{background-color: black;}
+		
+		.pagina{
+			grid-template-areas: 
+			"d2 d2 d2 d2 d2 d2 d2 d2 d2 d2 d2 d2"
+			"d3 d3 d3 d3 d3 d3 d3 d3 d3 d3 d3 d3"
+			". . . d1 d1 d1 d1 d1 d1 . . ."
+			" d4 d4 d4 d4 d4 d4 d4 d4 d4 d4 d4 d4"
+		}
+
+
+	}
+
+
+
+
+	
+
+	</style>
+
+</head>
+<body>
+	
+<div class="pagina">
+	<div class="div1">DIV 1</div>
+	<div class="div2">DIV 2</div>
+	<div class="div3">DIV 3</div>
+	<div class="div4">DIV 4</div>
+</div>
+
+
+</body>
+</html>
